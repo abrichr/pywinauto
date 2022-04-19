@@ -38,3 +38,20 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+  test_env:
+    runs-on: macos-10.15
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.7"]
+    steps:
+    - name: Install test apps
+      run:
+        pip install cix
+        cd apps/SendKeysTester/macos
+        sudo hdiutil attach send_keys_test_app.dmg
+        sudo cp -R /Volumes/send_keys_test_app/send_keys_test_app.app /Applications
+        sudo hdiutil detach /Volumes/send_keys_test_app/
+    - name: Run tests
+      run:
+        python3 pywinauto/unittests/macos/test_ax_element_info_macos.py
