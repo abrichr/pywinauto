@@ -5,9 +5,9 @@ name: Python package
 
 on:
   push:
-    branches: [ master, mac_os_latest ]
+    branches: [ master, mac_os_latest, macos_final_branch ]
   pull_request:
-    branches: [ master, mac_os_latest ]
+    branches: [ master, mac_os_latest, macos_final_branch ]
 
 jobs:
   build:
