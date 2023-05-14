@@ -70,13 +70,13 @@ elif sys.platform == 'darwin':
     install_requires = [
         'codecov',
         'six',
-        'pyobjc-core==5.3',
-        'pyobjc-framework-AppleScriptObjC==5.3',
-        'pyobjc-framework-ApplicationServices==5.3',
-        'pyobjc-framework-Cocoa==5.3',
-        'pyobjc-framework-CoreText==5.3',
-        'pyobjc-framework-FSEvents==5.3',
-        'pyobjc-framework-Quartz==5.3'
+        'pyobjc-core==9.1',
+        'pyobjc-framework-AppleScriptObjC==9.1',
+        'pyobjc-framework-ApplicationServices==9.1',
+        'pyobjc-framework-Cocoa==9.1',
+        'pyobjc-framework-CoreText==9.1',
+        'pyobjc-framework-FSEvents==9.1',
+        'pyobjc-framework-Quartz==9.1'
     ]
     packages = ["pywinauto", "pywinauto.macos"]
 else:
